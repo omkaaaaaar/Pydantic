@@ -41,3 +41,22 @@ It is not only used for **Data Validation** but it is also used to _attach_ **Me
 To attach _Metadata_(description, title, etc) we need to import and use _Annotated_ from typing module
 
 #### Field Validator
+
+PS: The hospital has tie-ups with banks (icici, hdfc, etc). The employees of these bank can get treatment in low fees.
+Soln: We can check it by checking the e-mail of the user; i.e - hdfc users will have @hdfc.com in the email!
+Now we will deal with custom buisness specific data validation techniques - _Field Validator_ it helps us to perform pn the fields custom validations and also can do transformation(name should be capital, etc)
+
+##### Field Validator, operates in 2 modes
+
+- Before Mode
+- After Mode
+
+Default mode used here is _after_
+When using the mode after, the value we will recieve will be after the _type cohercion_
+But if we did mode 'Befor' we will recieve the value before of the _type cohercion_
+
+#### Model Validator
+
+Ps:- We need to add an _'Emergency Contact'_ for patients _> age60_, we not save the patient info if the Emergency Contact is not provided for our criteria
+Soln: For this we will use, ModelValidator. Here we will need to work with 2 Fields _age, contact_
+We can't use Field Validtor here because the field validator works on only a single Field
