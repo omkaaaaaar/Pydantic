@@ -60,3 +60,18 @@ But if we did mode 'Befor' we will recieve the value before of the _type coherci
 Ps:- We need to add an _'Emergency Contact'_ for patients _> age60_, we not save the patient info if the Emergency Contact is not provided for our criteria
 Soln: For this we will use, ModelValidator. Here we will need to work with 2 Fields _age, contact_
 We can't use Field Validtor here because the field validator works on only a single Field
+
+#### Computed Fields
+
+This field is a field whose value is not provided by the user but it is computed based on the other fields
+ex:- _Weight and Height_ is provided by the user, so based on this we will Dynamically create _BMI_
+Since the BMI is calculated on the go with the help of the other fields that why it will be called as a 'Computed Fields'
+
+#### Nested Models
+
+To use a model in another model as a **field** is called as a Nested Modelss
+
+Ex: The patient addr wll look like:- Income Tax Colony, Indira Nagar, Jogeshwari-East, Mumbai - 400060
+But now we need to only extract the _Nagar_ or _Pincode_, this process will be very hectic to extract a particulat str, etc Because addr is a complex data which is built up of multiple more data
+
+So, in this situation, we should build a Address model and use it in Patient Model as a field | **Nested Model**

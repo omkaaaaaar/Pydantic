@@ -8,8 +8,6 @@ class Patient(BaseModel):
 #here we will define the ideal Type Validation Schema which we want
 
 
-
-
 def insert_patient_data(patient: Patient):
     print(patient.name)
     print(patient.age)

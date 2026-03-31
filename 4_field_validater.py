@@ -1,6 +1,8 @@
 from pydantic import BaseModel, EmailStr, AnyUrl, Field, field_validator
 from typing import List, Optional, Dict, Annotated
 
+
+
 class Patient(BaseModel):
     name: Annotated[str, Field(max_length=50, title="Patient Name", description="The full name of the patient.")]
     email: EmailStr
@@ -10,6 +12,7 @@ class Patient(BaseModel):
     married: Annotated[bool, Field(default=None, description="Is patient married or not.")]
     allergies: Annotated[Optional[List[str]], Field(default=None, max_length=5)]
     contact_details: Dict[str, str]
+
 
 
     #for Validation (email validation)
